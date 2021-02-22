@@ -12,7 +12,7 @@ class Records:
         self.df = None
         self.json = None
         
-    def get_single_batch(self, offset, limit):
+    def get_single_batch(self, offset=None, limit=None):
         "returns JSON result for a small batch query"
         res = requests.get(
         url="https://api.gbif.org/v1/occurrence/search/",
